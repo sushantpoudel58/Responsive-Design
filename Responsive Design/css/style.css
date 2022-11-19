@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+.boxes {
+   display: flex; 
+    width: 100%;
+    justify-content: space-between; 
+    padding: 0 5px;  
+    margin-top: 50px; 
+}
+
+.boxes .box {
+    background: gold;
+    height: 150px;  
+    flex-basis: 100%;
+    display: flex;
+    border: 1px solid #000; 
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media (max-width:768px) {
+    .boxes {
+        flex-wrap: wrap;   
+
+    }
+
+    .boxes .box {
+        flex-basis: 50%;  
+    }
+}
+
+@media (max-width:500px) {
+    .boxes .box {
+        flex-basis: 100%;
+    }
+}
